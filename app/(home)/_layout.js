@@ -1,10 +1,14 @@
 import {Stack} from 'expo-router';
-import { Header } from 'react-native/Libraries/NewAppScreen';
 
 export default function  layout(){
     return (
-        <Stack screenOptions={{HeaderShown: false}}>
+        <Stack screenOptions={{headerShown: false}}>
             <Stack.Screen name="index"/>
+            <Stack.Screen name="employees"/>
+            <Stack.Screen name="adddetails"/>
+            <Stack.Screen name="markattendance"/>
+            <Stack.Screen name="[user]"/>
+            <Stack.Screen name="summary"/>
         </Stack>
     );
 }

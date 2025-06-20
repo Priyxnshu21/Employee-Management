@@ -15,9 +15,9 @@ const employeeSchema = new mongoose.Schema({
         required: true
     },
     joiningDate: {
-        type: string,
+        type: String,
         required: true
-    },  
+    },
     dateOfBirth: {
         type: String,
         required: true
@@ -29,7 +29,7 @@ const employeeSchema = new mongoose.Schema({
     activeEmployee: {
         type: Boolean,
         required: true
-    }, 
+    },
     phoneNumber: {
         type: String,
         required: true
@@ -42,8 +42,7 @@ const employeeSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-
-})
+});
 
 const Employee = mongoose.model('Employee', employeeSchema);
 module.exports = Employee;

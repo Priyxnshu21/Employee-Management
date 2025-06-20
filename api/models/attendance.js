@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const attendanceSchema = new mongoose.Schema({
     employeeId: {
         type: String,
@@ -13,10 +14,11 @@ const attendanceSchema = new mongoose.Schema({
         required: true
     },
     status: {
+        enum: ['Present', 'Absent', 'Half Day', 'Holiday'],
         type: String,
-        enum: ['Present', 'Absent', 'Leave'],
         required: true
     }
 });
+
 const Attendance = mongoose.model('Attendance', attendanceSchema);
 module.exports = Attendance;
